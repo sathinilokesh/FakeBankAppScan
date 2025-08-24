@@ -1,16 +1,29 @@
 # 1. High-Level Component Diagram (Mermaid)
 
-```mermaid
-flowchart LR
-    A[Data Src (APKs)] --> B[Ingestion & Pre-processing]
-    B --> C[Raw Storage (Object DB)]
-    B --> D[Feature Store]
+┌────────────┐        ┌─────────────────┐        ┌────────────────┐
+│  Data Src  │ ──►    │ Ingestion &     │ ──►    │  Raw Storage   │
+│  (APKs)    │        │ Pre-processing  │        │   (Object DB)  │
+└────────────┘        └─────────────────┘        └────────────────┘
+                             │
+                             ▼
+                     ┌────────────────┐
+                     │ Feature Store  │
+                     └────────────────┘
+                             │
+    ┌────────────┐           ▼            ┌──────────────┐
+    │ Static     │──feature──┬──────────► │ ML Service / │
+    │ Analysis   │           │            │ Rule Engine  │
+    └────────────┘           │            └──────────────┘
+                             ▼
+                     ┌────────────────┐
+                     │ Results API    │
+                     └────────────────┘
+                             │
+                             ▼
+                     ┌────────────────┐
+                     │ UI / CLI Tool  │
+                     └────────────────┘
 
-    E[Static Analysis] -->|feature| D
-    D --> F[ML Service / Rule Engine]
-
-    F --> G[Results API]
-    G --> H[UI / CLI Tool]
 
 
 
