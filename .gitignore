@@ -1,0 +1,55 @@
+# Ignore virtual environments
+venv/
+ENV/
+env/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebook checkpoints (if any)
+.ipynb_checkpoints
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Environment variable files (if used)
+.env
+.env.*
+
+# Android / APK build artifacts (if any tools generate these)
+*.apk
+*.dex
+*.class
+
+# Model files
+*.pkl
+*.joblib
+
+# Large datasets or test samples (optional)
+data/test_samples/*
+data/legitimate_apps/*
+
+# Model output or cache (optional)
+models/*.h5
+models/*.pt
+models/*.tflite
+
+# Streamlit app's temporary file storage
+.streamlit/
+
+# Pip or poetry files (build artifacts)
+pip-wheel-metadata/
+*.egg-info/
+
+# Requirements lock (if generated)
+poetry.lock
+Pipfile.lock
