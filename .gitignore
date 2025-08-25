@@ -1,7 +1,7 @@
 # Ignore virtual environments
-venv/
-ENV/
-env/
+*venv/
+*ENV/
+*env/
 
 # Byte-compiled / cache
 __pycache__/
